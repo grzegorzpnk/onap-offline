@@ -1,0 +1,93 @@
+# Copyright © 2017 Amdocs, Bell Canada
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#################################################################
+# Global configuration defaults.
+#################################################################
+global:
+  nodePortPrefix: 302
+  readinessRepository: oomk8s
+  readinessImage: readiness-check:2.0.0
+  ubuntuInitRepository: registry.hub.docker.com
+  ubuntuInitImage: oomk8s/ubuntu-init:2.0.0
+  configImage: onap/aaf/aaf_config:2.1.8
+  persistence:
+    enabled: true
+
+  cadi:
+    hostname: "aaf.onap"
+    cadi_latitude: "38.0"
+    cadi_longitude: "-72.0"
+    aaf_env: "DEV"
+    cass_host: "aaf-cass.onap"
+    cadi_locator_as: "aaf-locate.onap"
+
+#################################################################
+# Application configuration defaults.
+#################################################################
+repository: nexus3.onap.org:10001
+
+flavor: small
+# default number of instances
+replicaCount: 1
+
+nodeSelector: {}
+
+affinity: {}
+
+# probe configuration parameters
+liveness:
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  # necessary to disable liveness probe when setting breakpoints
+  # in debugger so K8s doesn't restart unresponsive container
+  enabled: true
+
+readiness:
+  initialDelaySeconds: 10
+  periodSeconds: 10
+
+ingress:
+  enabled: false
+
+## Persist data to a persitent volume
+persistence:
+  mountPath: "/mnt/data/aaf"
+  enabled: true
+  config:
+    #existingClaim:
+    volumeReclaimPolicy: Retain
+    accessMode: ReadWriteMany
+    size: 2Gi
+    mountSubPath: "config"
+    storageClass: "manual"
+  logs:
+    #existingClaim:
+    volumeReclaimPolicy: Retain
+    accessMode: ReadWriteMany
+    size: 2Gi
+    mountSubPath: "logs"
+    storageClass: "manual"
+
+aaf-cs:
+  persistence:
+    #existingClaim:
+    mountPath: /dockerdata-nfs
+    mountSubPath: "cass"
+    volumeReclaimPolicy: Retain
+    accessMode: ReadWriteOnce
+    size: 10Gi
+    storageClass: "manual"
+
+resources: {}

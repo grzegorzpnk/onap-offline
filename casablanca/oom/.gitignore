@@ -1,0 +1,22 @@
+# Application
+kubernetes/config/onap-parameters.yaml
+kubernetes/dist/*
+requirements.lock
+**/charts/*.tgz
+
+# AAI Schema
+**/schema/*
+
+
+# Eclipse
+.classpath
+.factorypath
+.project
+.settings/
+
+# IntelliJ
+.idea/*
+*.iml
+
+# Mac OS
+*DS_Store*
