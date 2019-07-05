@@ -67,9 +67,9 @@ appc:
   config:
     openStackType: "OpenStackProvider"
     openStackName: "OpenStack"
-    openStackKeyStoneUrl: "http://192.168.186.11:5000"
-    openStackServiceTenantName: "onap-casablanca-dev"
-    openStackTenantId: "fc6818a68bdc436097535699b808ece2"
+    openStackKeyStoneUrl: "http://10.192.133.3:5000"
+    openStackServiceTenantName: "onap-casablanca"
+    openStackTenantId: "27ecb61ee9754e6d8a6bb9a25ac445b2"
     openStackDomain: "Default"
     openStackUserName: "onap"
     openStackPassword: "t6ygfr5"
@@ -105,7 +105,7 @@ nbi:
   config:
     # openstack configuration
     openStackRegion: "RegionOne"
-    openStackVNFTenantId: "fc6818a68bdc436097535699b808ece2"
+    openStackVNFTenantId: "27ecb61ee9754e6d8a6bb9a25ac445b2"
 policy:
   enabled: true
 pomba:
@@ -114,15 +114,15 @@ portal:
   enabled: true
 robot:
   enabled: true
-  # openstack configuration
+  # openstack configuration  
   openStackUserName: "onap"
-  openStackRegion: "RegionOne"
-  openStackKeyStoneUrl: "http://192.168.186.11:5000"
-  openStackServiceTenantName: "onap-casablanca-dev"
+  openStackRegion: "ChatillonONAP"
+  openStackKeyStoneUrl: "http://10.192.133.3:5000"
+  openStackServiceTenantName: "onap-casablanca"
   openStackEncryptedPasswordHere: "caf228f59d7e5feec62818d6f1090aa7"
   openStackPassword: "t6ygfr5"
-  openStackPublicNetId: "6652cbfa-ee3d-40d1-bd45-02d1c123e4a2"
-  openStackTenantId: "fc6818a68bdc436097535699b808ece2"            
+  openStackPublicNetId: "88b489a3-6d15-49c5-94ff-f3278f0ad8e7"
+  openStackTenantId: "27ecb61ee9754e6d8a6bb9a25ac445b2"
 sdc:
   enabled: true
 sdnc:
@@ -147,10 +147,10 @@ so:
     dmaapTopic: "AUTO"
 
     openStackUserName: "onap"
-    openStackRegion: "RegionOne"
-    openStackKeyStoneUrl: "http://192.168.186.11:5000"
-    openStackServiceTenantName: "onap-casablanca-dev"
-    openStackTenantId: "fc6818a68bdc436097535699b808ece2"
+    openStackRegion: "ChatillonONAP"
+    openStackKeyStoneUrl: "http://10.192.133.3:5000"
+    openStackServiceTenantName: "onap-casablanca"
+    openStackTenantId: "27ecb61ee9754e6d8a6bb9a25ac445b2"
     openStackPassword: "t6ygfr5"
     openStackEncryptedPasswordHere: "caf228f59d7e5feec62818d6f1090aa7"
 

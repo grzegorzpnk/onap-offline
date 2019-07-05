@@ -46,36 +46,34 @@ demoArtifactsRepoUrl: "https://nexus.onap.org/content/repositories/releases"
 # Openstack medium sized flavour name.  Maps GLOBAL_INJECTED_VM_FLAVOR
 openStackFlavourMedium: "m1.medium"
 # Openstack keystone URL.  Maps to GLOBAL_INJECTED_KEYSTONE
-openStackKeyStoneUrl: "http://192.168.186.11:5000"
+openStackKeyStoneUrl: "http://10.192.133.3:5000"
 # UUID of the Openstack network that can assign floating ips.  Maps to GLOBAL_INJECTED_PUBLIC_NET_ID
-openStackPublicNetId: "6652cbfa-ee3d-40d1-bd45-02d1c123e4a2"
+openStackPublicNetId: "88b489a3-6d15-49c5-94ff-f3278f0ad8e7"
 # password for Openstack tenant where VNFs will be spawned.  Maps to GLOBAL_INJECTED_OPENSTACK_PASSWORD
 openStackPassword: "t6ygfr5"
 # Openstack region.  Maps to GLOBAL_INJECTED_REGION
-openStackRegion: "RegionOne"
+openStackRegion: "ChatillonONAP"
 # Openstack tenant UUID where VNFs will be spawned. Maps to GLOBAL_INJECTED_OPENSTACK_TENANT_ID
-openStackTenantId: "fc6818a68bdc436097535699b808ece2"
+openStackTenantId: "27ecb61ee9754e6d8a6bb9a25ac445b2"
 # username for Openstack tenant where VNFs will be spawned.  Maps to GLOBAL_INJECTED_OPENSTACK_USERNAME
 openStackUserName: "onap"
 # Project name of Openstack where VNFs will be spawned. Maps to GLOBAL_INJECTED_OPENSTACK_PROJECT_NAME
-openStackProjectName: "onap-casablanca-dev"
+openStackProjectName: "onap-casablanca"
 # Domain id of openstack where VNFs will be deployed. Maps to GLOBAL_INJECTED_OPENSTACK_DOMAIN_ID
 openStackDomainId: "Default"
 # Openstack Keystone API version. Valid values are [ v2.0, v3 ]. Maps to GLOBAL_INJECTED_OPENSTACK_KEYSTONE_API_VERSION
 openStackKeystoneAPIVersion: "v2.0"
-# Openstack glance image name for Ubuntu 14.  Maps to GLOBAL_INJECTED_UBUNTU_1404_IMAGE
-ubuntu14Image: "ubuntu-14.04.4-server-cloudimg (20160217)"
 # Openstack glance image name for Ubuntu 16.  Maps to GLOBAL_INJECTED_UBUNTU_1604_IMAGE
-ubuntu16Image: "Ubuntu 16.04 LTS (Xenial Xerus) [20180126]"
+ubuntu16Image: "ubuntu-16.04"
 # GLOBAL_INJECTED_SCRIPT_VERSION.  Maps to GLOBAL_INJECTED_SCRIPT_VERSION
 scriptVersion: "1.3.0"
 # Openstack network to which VNFs will bind their primary (first) interface.  Maps to GLOBAL_INJECTED_NETWORK
-openStackPrivateNetId: "c5c9c85b-2bde-4457-a019-c94db55ae80d"
+openStackPrivateNetId: "d63bc854-a617-4616-acea-688aced3dc7c"
 # Openstack security group for instantiating VNFs
-openStackSecurityGroup: "onap_sg_VP7a"
+openStackSecurityGroup: "onap_sg_YP9m"
 # SDNC Preload configuration
 # Openstack subnet UUID for the network defined by openStackPrivateNetId.  Maps to onap_private_subnet_id
-openStackPrivateSubnetId: "d82bcbab-40fd-4c8c-91d0-4196657e1ed0"
+openStackPrivateSubnetId: "5a13569f-f96c-47cf-a584-eb85c6448167"
 # CIDR notation for the Openstack private network where VNFs will be spawned.  Maps to onap_private_net_cidr
 openStackPrivateNetCidr: "10.0.0.0/16"
 # The first 2 octets of the private Openstack subnet where VNFs will be spawned.
@@ -86,7 +84,7 @@ openStackOamNetworkCidrPrefix: "10.0"
 vidServerProtocol:  "http"
 vidServerPort:  "8080"
 # Override with Pub Key for access to VNF
-vnfPubKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6KbTxfT368DNBzLyfTYJ0INI7mkRXc/xMpx349TXGBTQ06g2toN/p9OM188EGZd/qERRXcdnKY8lYULVIXZEoQbXTus2gTQWXy1zn5nhSkhste3L1uG+sjHySQHBj5NyOC32iNehRNu03bHi8XRBAOHZsXx6JpkltLXgWqQI91+h9i7I/4trpPyODtzz1DLIkbXv9woncwllKf4bmm+Bk6/OJKHuAlBdCLL5diZqODEZlKOyPPC9c07a835sskMgbscPrvBQigZFRNerjQlFXXCHjRwoBMvfS7kD7/R/K1fmSLtH0w4VEp5iwS9SIezgEeO2aDFPucmYG4MQDGzAz Generated-by-Nova"
+vnfPubKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/CObbKVtJKy6dop6TfAZYJ6eh56A5cDnb+UlAH/UjfLoPL6W98GbyZ4H13Yt/han4oN77TIcoqneYL7NPgZyud3UnuH8BCFodcqe0jf+m8lXXas8FQVGCNTfm8+fT1FE/5n1g4oXIoVI6saY70L9ejN1uilnaQaxDubi69WVT7VBBwX8vfyeiUj6UbmUuHKPOgBzQxbryivCiOoYG3qDClD5NM0qm7zwdiRcN46kr68nbtmVllTryW1E4dSTraBzUxXGy0+blOCsP7Pk0odoevDAULrCl7zesJRC5qZo1o2+Md4OEcTXo1X+L5IUtO2Q8Up2xS9AnPRjsxZizAe1J warsaw@5G-EVE1"
 # Override with DCAE VES Collector external IP
 dcaeCollectorIp: ""
 
@@ -201,4 +199,5 @@ persistence:
   size: 2Gi
   mountPath: /dockerdata-nfs
   mountSubPath: robot/logs
+
 

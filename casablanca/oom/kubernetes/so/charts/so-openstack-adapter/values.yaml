@@ -77,12 +77,13 @@ mariadb:
 ingress:
   enabled: false
 config:
-  openStackUserName: "vnf_user"
-  openStackRegion: "RegionOne"
-  openStackKeyStoneUrl: "http://1.2.3.4:5000/v2.0"
+  openStackUserName: "onap"
+  openStackRegion: "ChatillonONAP"
+  openStackKeyStoneUrl: "http://10.192.133.3:5000/v2.0"
   openStackServiceTenantName: "service"
-  openStackEncryptedPasswordHere: "c124921a3a0efbe579782cde8227681e"
-  openStackTenantId: "d570c718cbc545029f40e50b75eb13df"
+  openStackEncryptedPasswordHere: "caf228f59d7e5feec62818d6f1090aa7"
+  openStackTenantId: "27ecb61ee9754e6d8a6bb9a25ac445b2"
+  openStackPassword: "t6ygfr5"
 nodeSelector: {}
 tolerations: []
 affinity: {}
